@@ -1,9 +1,14 @@
-﻿using System;
+using System;
 
 namespace FibonacciSeries {
   class Program {
     static void Main(string[] args) {
-      int[] fibonacci = CreateFibonacciSeries(10);
+
+      int count = 5;
+      if(args.Length == 1)
+		count = int.Parse(args[0]);
+      
+      int[] fibonacci = CreateFibonacciSeries(count);
 
       for (int i = 0; i < fibonacci.Length; i++) {
         Console.Out.Write(fibonacci[i]);
